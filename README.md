@@ -1,5 +1,6 @@
 # Ohjelmistotekniikka kevät 2023 harjoitustyö
 
+Ohjelmistotekniikkakurssin harjoitustyön ja laskareiden repo
 
 ## Tehtävät
 
