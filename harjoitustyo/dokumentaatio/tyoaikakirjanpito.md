@@ -1,6 +1,7 @@
 
-| Työtehtävä | Aika  |
-|------------|-------|
-| Alustus    | 20min |
+| Työtehtävä            | Aika  |
+|-----------------------|-------|
+| Alustus               | 20min |
+| Vaatimusmäärittely    | 30min |
 
-Yhteensä: 20min
+Yhteensä: 50min
