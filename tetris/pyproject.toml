@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "tetris-py"
+name = "tetris"
 version = "0.0.0"
 description = "tetris harjoitus"
 authors = ["KyperCT <38316792+KyperCT@users.noreply.github.com>"]
