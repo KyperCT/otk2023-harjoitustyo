@@ -1,10 +1,11 @@
 
 | Työtehtävä                  | Aika  |
 |-----------------------------|-------|
-| Alustus                     | 20min |
-| Vaatimusmäärittely          | 30min |
-| Alustavaa pygamen asettelua | 30min |
-| Ruutumalli                  | 30min |
-| GUI funktioiden aloittelua  | 1h    |
+| Alustus                            | 20min |
+| Vaatimusmäärittely                 | 30min |
+| Alustavaa pygamen asettelua        | 30min |
+| Ruutumalli                         | 30min |
+| GUI funktioiden aloittelua         | 1h    |
+| Palikoilla malli, palikat liikkuu  | 2h    |
 
-Yhteensä: 80min
+Yhteensä: 4h 50min
