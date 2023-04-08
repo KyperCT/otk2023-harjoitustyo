@@ -7,5 +7,6 @@
 | Ruutumalli                         | 30min |
 | GUI funktioiden aloittelua         | 1h    |
 | Palikoilla malli, palikat liikkuu  | 2h    |
+| Rivit tyhjenee, saa pisteitä       | 2h    |
 
-Yhteensä: 4h 50min
+Yhteensä: 6h 50min
