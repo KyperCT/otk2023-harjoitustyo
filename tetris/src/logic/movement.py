@@ -1,30 +1,33 @@
 from model import tetris_block
 
-def main_move(grid, keys, blocks, state):
+def game_move(grid, blocks):
     if len(blocks) == 0:
         blocks.append(tetris_block.Block())
-    else:
-        for point in blocks[0]:
-            grid.update(point[0], point[1], False)
+    for point in blocks[0]:
+        grid.update(point[0], point[1], False)
         
-        if keys[0]:
-            pass
-        if keys[1]:
-            if not check_left_colisions(grid, blocks[0]):
-                blocks[0].move_left()
-        if keys[2]:
-            if not check_right_colisions(grid, blocks[0]):
-                blocks[0].move_right()
-        if keys[3]:
-            if not check_colisions(grid, blocks[0]):
-                blocks[0].move_down()
-        
-        if state == 4 and not check_colisions(grid, blocks[0]):
+    if not check_colisions(grid, blocks[0]):
+        blocks[0].move_down()
+    grid_update(grid, blocks)
+
+def user_move(grid, keys, blocks):
+    for point in blocks[0]:
+        grid.update(point[0], point[1], False)
+
+    if keys[0]:
+        pass
+    if keys[1]:
+        if not check_left_colisions(grid, blocks[0]):
+            blocks[0].move_left()
+    if keys[2]:
+        if not check_right_colisions(grid, blocks[0]):
+            blocks[0].move_right()
+    if keys[3]:
+        if not check_colisions(grid, blocks[0]):
             blocks[0].move_down()
-            state = 0
-        else:
-            state += 1
-    
+    grid_update(grid, blocks)
+
+def grid_update(grid, blocks):
     if not check_colisions(grid, blocks[0]):
         for point in blocks[0]:
             grid.update(point[0], point[1], True)
@@ -32,7 +35,6 @@ def main_move(grid, keys, blocks, state):
         for point in blocks[0]:
             grid.update(point[0], point[1], True)
         blocks.pop()
-    return state
 
 def check_colisions(grid, block):
     for point in block:

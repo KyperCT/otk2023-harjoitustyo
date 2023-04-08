@@ -7,11 +7,15 @@ def setup():
 
     display = pygame.display.set_mode(display_resolution)
 
-    return display, caption, display_resolution
+    pygame.font.init()
+    font = pygame.font.SysFont("Arial", 30)
 
-def render(grid, display, disp_res):
+    return display, caption, display_resolution, font
+
+def render(grid, score, display, disp_res, font):
   #sidebar
   pygame.draw.rect(display, (140, 176, 40), ((0,0),(disp_res[0]/3, disp_res[1])))
+  display.blit(font.render(str(score), False, (0,0,0)), (disp_res[0]/6, disp_res[1]/5))
 
   #core tetris grid
   pygame.draw.rect(display, (255, 255, 255), ((disp_res[0]/3,0),(disp_res[0], disp_res[1])))

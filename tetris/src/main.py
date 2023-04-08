@@ -1,13 +1,13 @@
 import pygame
 from GUI import display, interaction
-from model import tetris_grid
-from logic import movement
+from model import tetris_grid, tetris_block
+from logic import movement, score
 
 def main():
     # Standard board 10 wide 20 tall
     # board settings, will be refactored
     
-    dp, cap, resolution = display.setup()
+    dp, cap, resolution, font = display.setup()
     pygame.display.set_caption(cap)
     clock = pygame.time.Clock()
     pygame.init()
@@ -15,20 +15,28 @@ def main():
     grid = tetris_grid.Grid()
 
     running = True
-    frame = 0
     tick_speed = 10
-
-    blocks = []
+    game_speed = 4
     state = 0
 
+    blocks = [tetris_block.Block()]
+    total_score = 0
+
     while running:
-        frame = (frame+1)%(tick_speed/4)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
         keys = interaction.get_keypresses()
-        state = movement.main_move(grid, keys, blocks, state)
-        display.render(grid, dp, resolution)
+        movement.user_move(grid, keys, blocks)
+        if state == game_speed:
+            movement.game_move(grid, blocks)
+            state = 0
+        else:
+            state += 1
+        if len(blocks) == 0:
+            total_score = score.check_score(grid, total_score)
+            blocks.append(tetris_block.Block())
+        display.render(grid, total_score, dp, resolution, font)
         pygame.display.update()
         clock.tick(tick_speed)
 
