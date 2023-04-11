@@ -4,8 +4,10 @@ from model import tetris_grid, tetris_block
 from logic import movement, score
 
 def main():
-    # Standard board 10 wide 20 tall
-    # board settings, will be refactored
+    '''
+    Main loop for tetris game. Runs initialization functions, and then runs the core game functions in a loop.
+    Ensures operations are done on appropriate frames.
+    '''
     
     dp, cap, resolution, font = display.setup()
     pygame.display.set_caption(cap)
@@ -26,16 +28,22 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-        keys = interaction.get_keypresses()
-        movement.user_move(grid, keys, blocks)
-        if state == game_speed:
-            movement.game_move(grid, blocks)
-            state = 0
-        else:
-            state += 1
         if len(blocks) == 0:
-            total_score = score.check_score(grid, total_score)
             blocks.append(tetris_block.Block())
+            movement.grid_update(grid, blocks)
+        else:
+            keys = interaction.get_keypresses()
+            movement.user_move(grid, keys, blocks)
+            if state == game_speed:
+                movement.game_move(grid, blocks)
+                state = 0
+            else:
+                state += 1
+        if len(blocks) == 0:
+            display.render(grid, total_score, dp, resolution, font)
+            pygame.display.update()
+            pygame.time.wait(250)
+            total_score = score.check_score(grid, total_score)
         display.render(grid, total_score, dp, resolution, font)
         pygame.display.update()
         clock.tick(tick_speed)
