@@ -13,3 +13,7 @@
  - palat liikkuu näytöllä
  - Kun palat muodostaa rivin, rivi tyhjenee
  - Voi saada pisteitä
+ - Pelistä voi poistua "Esc"-näppäimellä
+ - Refaktoroitu pelin logiikan silmukka pois pääsilmukasta
+ - Refaktoroitu koodia tyyliseikoiltaan
+ - Testattu ruudukon ja palikoiden toiminnallisuuden oikeellisuutta
