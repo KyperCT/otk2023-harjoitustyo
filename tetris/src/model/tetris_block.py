@@ -2,11 +2,11 @@ SHAPES = {0: ((0, 0), (0, 1), (1, 0), (1, 1))}
 
 
 class Block:
-    def __init__(self, x=5, y=0, shape=0):
+    def __init__(self, x_coord=5, y_coord=0, shape=0):
         self.block = []
         self.shape = shape
         for point in SHAPES[shape]:
-            self.block.append((point[0] + x, point[1] + y))
+            self.block.append((point[0] + x_coord, point[1] + y_coord))
 
     def move_down(self):
         new_pos = []

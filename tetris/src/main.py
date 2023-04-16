@@ -1,5 +1,5 @@
 import pygame
-from GUI import display, interaction
+from gui import display, interaction
 from model import tetris_grid, tetris_block
 from logic import movement, score
 
@@ -8,7 +8,7 @@ def main():
     # Standard board 10 wide 20 tall
     # board settings, will be refactored
 
-    dp, cap, resolution, font = display.setup()
+    main_display, cap, resolution, font = display.setup()
     pygame.display.set_caption(cap)
     clock = pygame.time.Clock()
     pygame.init()
@@ -37,7 +37,7 @@ def main():
         if len(blocks) == 0:
             total_score = score.check_score(grid, total_score)
             blocks.append(tetris_block.Block())
-        display.render(grid, total_score, dp, resolution, font)
+        display.render(grid, total_score, main_display, resolution, font)
         pygame.display.update()
         clock.tick(tick_speed)
 

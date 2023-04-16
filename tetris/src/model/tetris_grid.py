@@ -6,27 +6,27 @@ class Grid:
             [False for i in range(0, self.columns)] for i in range(0, self.rows)
         ]
 
-    def update(self, x, y, state: bool):
-        self._grid[y][x] = state
+    def update(self, column, row, state: bool):
+        self._grid[row][column] = state
 
-    def get(self, x, y) -> bool:
-        return self._grid[y][x]
+    def get(self, column, row) -> bool:
+        return self._grid[row][column]
 
-    def check_row(self, y):
-        for x in self._grid[y]:
-            if not x:
+    def check_row(self, row):
+        for column in self._grid[row]:
+            if not column:
                 return False
         return True
 
-    def shift_down_over(self, y):
-        if y == 0:
+    def shift_down_over(self, row):
+        if row == 0:
             self._grid[0] = [False for i in range(0, self.columns)]
             return
         fresh_row = [False for i in range(0, self.columns)]
-        del self._grid[y]
+        del self._grid[row]
         self._grid = [fresh_row] + self._grid
 
     def __iter__(self):
-        for y in range(0, len(self._grid)):
-            for x in range(0, len(self._grid[0])):
-                yield self._grid[y][x], x, y
+        for row in range(0, len(self._grid)):
+            for column in range(0, len(self._grid[0])):
+                yield self._grid[row][column], column, row

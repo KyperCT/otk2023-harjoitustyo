@@ -1,5 +1,4 @@
 import pygame
-from time import sleep
 
 
 def setup():
@@ -35,5 +34,3 @@ def render(grid, score, display, disp_res, font):
         size = (grid_px_size - 2, grid_px_size - 2)
         if not square[0]:
             pygame.draw.rect(display, (0, 0, 0), (top_corner, size))
-
-    return

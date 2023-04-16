@@ -44,7 +44,7 @@ def check_colisions(grid, block):
     for point in block:
         if point[1] == 19:
             return True
-        elif grid.get(point[0], point[1]) or grid.get(point[0], point[1] + 1):
+        if grid.get(point[0], point[1]) or grid.get(point[0], point[1] + 1):
             return True
     return False
 
@@ -53,7 +53,7 @@ def check_left_colisions(grid, block):
     for point in block:
         if point[0] == 0:
             return True
-        elif grid.get(point[0], point[1]) or grid.get(point[0] - 1, point[1]):
+        if grid.get(point[0], point[1]) or grid.get(point[0] - 1, point[1]):
             return True
     return False
 
@@ -62,6 +62,6 @@ def check_right_colisions(grid, block):
     for point in block:
         if point[0] == 9:
             return True
-        elif grid.get(point[0], point[1]) or grid.get(point[0] + 1, point[1]):
+        if grid.get(point[0], point[1]) or grid.get(point[0] + 1, point[1]):
             return True
     return False

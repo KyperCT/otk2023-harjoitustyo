@@ -6,16 +6,16 @@ def get_keypresses() -> tuple:
     output: tuple(bool) with inputs in order up, left, right, down
     """
     keys = pygame.key.get_pressed()
-    up, left, right, down = False, False, False, False
+    up_direction, left, right, down = False, False, False, False
     if keys[pygame.K_w] or keys[pygame.K_UP]:
-        up = True
+        up_direction = True
     if keys[pygame.K_a] or keys[pygame.K_LEFT]:
         left = True
     if keys[pygame.K_d] or keys[pygame.K_RIGHT]:
         right = True
     if keys[pygame.K_s] or keys[pygame.K_DOWN]:
         down = True
-    return up, left, right, down
+    return up_direction, left, right, down
 
 
 def update_keypresses(keys) -> tuple:
