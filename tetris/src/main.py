@@ -24,6 +24,8 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+        if interaction.exit():
+            running = False
         keys = interaction.get_keypresses()
         grid, total_score, state = core.core_loop(grid, total_score, keys, state)
         display.render(grid, total_score, main_display, resolution, font)
