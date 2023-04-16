@@ -11,5 +11,6 @@
 | pylint conffattu, formatointia     | 30min | 16.4.2023  |
 | refaktoroitu logiikkaa siistimmäksi| 30min | 16.4.2023  |
 | testejä ruudukolle ja neliöille    | 1h    | 16.4.2023  |
+| Lisätty exit nappi, dokumentintia  | 30min | 16.4.2023  |
 
-Yhteensä: 8h 50min
+Yhteensä: 9h 20min
