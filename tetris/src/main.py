@@ -1,7 +1,7 @@
 import pygame
 from gui import display, interaction
-from model import tetris_grid, tetris_block
-from logic import movement, score, core
+from model import tetris_grid
+from logic import core
 
 
 def main():
@@ -14,13 +14,11 @@ def main():
     pygame.init()
 
     grid = tetris_grid.Grid()
+    total_score = 0
 
     running = True
     tick_speed = 10
     state = None
-
-    blocks = [tetris_block.Block()]
-    total_score = 0
 
     while running:
         for event in pygame.event.get():
