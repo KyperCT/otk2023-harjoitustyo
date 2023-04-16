@@ -8,16 +8,16 @@ ohjelma pitää kirjaa tuloksista.
 ## Perusversion toiminnallisuus
 
  - Ohjelma toteuttaa Tetriksen perustoiminnallisuuden
-   - Ohjelma näyttää pelikentän
+   - Ohjelma näyttää pelikentän \- tehty
    - Kentän yläpäähän ilmestyy eri muotoisia paloja, joita pelaaja voi manipuloida sääntöjen mukaisesti
-   - Palat laskeutuu alaspäin vakionopeutta
+   - Palat laskeutuu alaspäin vakionopeutta \- tehty
    - Paloja voi pyörittää 90 asteen vaiheissa
-   - Alaspäin laskeutumista voi nopeuttaa näppäimellä
-   - Kun palat osuu kentän pohjalle tai jo pelattuun palaan, pala jää paikalleen ja annetaan uusi pala
-   - jos palat täyttää kentän jossain rivissä kokonaan, palat katoaa ja rivin yläpuolella olevat rivit siirtyy kadonneen rivin tilalle
-   - Jos useampi rivi täyttyy samaan aikaan, ne kaikki katoaa ja ylemmät rivit siirtyy alkamaan alimman kadonneen rivin kohdalta
-   - Rivin täyttämisestä saa pisteitä, jotka näytetään pelinäkymässä
-   - Useamman rivin täytöstä saa enemmän pisteitä
+   - Alaspäin laskeutumista voi nopeuttaa näppäimellä \- tehty
+   - Kun palat osuu kentän pohjalle tai jo pelattuun palaan, pala jää paikalleen ja annetaan uusi pala \- tehty
+   - jos palat täyttää kentän jossain rivissä kokonaan, palat katoaa ja rivin yläpuolella olevat rivit siirtyy kadonneen rivin tilalle \- tehty
+   - Jos useampi rivi täyttyy samaan aikaan, ne kaikki katoaa ja ylemmät rivit siirtyy alkamaan alimman kadonneen rivin kohdalta \- tehty
+   - Rivin täyttämisestä saa pisteitä, jotka näytetään pelinäkymässä \- tehty
+   - Useamman rivin täytöstä saa enemmän pisteitä \- tehty
    - Peli päättyy, kun kentän ylimmällä rivillä on pala siten, että uutta palaa ei voi sijoittaa kentälle
  - Pelin päätyttyä ohjelma tarjoaa mahdollisuuden kirjata talteen pelin aikana kertyneet pisteet nimimerkillä
  - Ohjelmalla voi katsoa listaa aiemmista tuloksista suuruusjärjestyksessä
