@@ -1,29 +1,19 @@
 import unittest
+from unittest.mock import Mock, call
+from model import tetris_block, tetris_grid
 from logic import movement
-
-class FakeBlock:
-    def __init__(self, x=None, y=None, shape=0):
-        self.block_down_move_count = 0
-        self.block_left_move_count = 0
-        self.block_right_move_count = 0
-    
-    def move_down(self):
-        self.block_down_move_count += 1
-    
-    def move_left(self):
-        self.block_left_move_count += 1
-    
-    def move_right(self):
-        self.block_right_move_count += 1
-    
-    def __iter__(self):
-        return (point for point in [(5,0),(6,0),(5,1),(6,1)])
-
 
 class TestMovementFunctions(unittest.TestCase):
     def setUp(self):
-        self.fake_blocks = [FakeBlock()]
+        self.fake_block = Mock(tetris_block.Block(shape=0))
+        self.fake_grid = Mock(tetris_grid.Grid())
+        self.fake_block.__iter__ = Mock(return_value=iter([(0, 0), (0, 1), (1, 0), (1, 1)]))
     
     def test_game_move_updates_block(self):
-        movement.game_move(self.grid, self.fake_blocks)
-        self.assertEqual(self.fake_blocks[0].block_down_move_count, 1)
+        movement.game_move(self.fake_grid, [self.fake_block])
+        self.fake_block.move_down.assert_called_once()
+    
+    def test_game_move_clears_old_block(self):
+        movement.game_move(self.fake_grid, [self.fake_block])
+        self.fake_grid.update.assert_has_calls([call(0,0,False), call(0,1,False),
+                                                call(1,0,False), call(1,1,False)])
