@@ -17,3 +17,4 @@
  - Refaktoroitu pelin logiikan silmukka pois pääsilmukasta
  - Refaktoroitu koodia tyyliseikoiltaan
  - Testattu ruudukon ja palikoiden toiminnallisuuden oikeellisuutta
+ - Aloitettu testaamaan pelin automaattisten liikkeiden ruudukon ja palikoiden päivittämistä
