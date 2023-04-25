@@ -25,3 +25,5 @@
  - Pelillä on aloitus/lopetus näkymä
  - Peli päättyy, jos palaa ei voi sijoittaa ruudun alkuun
  - Kattavuusraportti ei katso käyttöliittymän koodia
+ - Siistitty ja järjestelty koodia
+ - Lisätty uusi palikkatesti

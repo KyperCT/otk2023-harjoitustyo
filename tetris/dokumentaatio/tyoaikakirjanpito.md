@@ -13,5 +13,7 @@
 | testejä ruudukolle ja neliöille             | 1h    | 16.4.2023  |
 | Lisätty exit nappi, dokumentintia           | 30min | 16.4.2023  |
 | Lisätty testejä logiikkaan, dokumentointia  | 1h    | 18.4.2023  |
+| Lisätty peliin loput palat, lopetus ja menu | 1h    | 25.4.2023  |
+| Reformatoitu ja siistitty koodia            | 1h    | 25.4.2023  |
 
-Yhteensä: 10h 20min
+Yhteensä: 12h 20min
