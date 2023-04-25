@@ -43,11 +43,13 @@ def grid_update(grid, blocks):
             grid.update(point[0], point[1], True)
         blocks.pop()
 
+
 def check_colisions(grid, block):
     for point in block:
         if grid.get(point[0], point[1]):
             return True
     return False
+
 
 def check_floor(grid, block):
     for point in block:
