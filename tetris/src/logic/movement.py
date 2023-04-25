@@ -7,7 +7,7 @@ def game_move(grid, blocks):
     for point in blocks[0]:
         grid.update(point[0], point[1], False)
 
-    if not check_colisions(grid, blocks[0]):
+    if not check_floor(grid, blocks[0]):
         blocks[0].move_down()
     grid_update(grid, blocks)
 
@@ -19,19 +19,21 @@ def user_move(grid, keys, blocks):
     if keys[0]:
         pass
     if keys[1]:
-        if not check_left_colisions(grid, blocks[0]):
-            blocks[0].move_left()
+        blocks[0].move_left()
+        if check_colisions(grid, blocks[0]):
+            blocks[0].unmove()
     if keys[2]:
-        if not check_right_colisions(grid, blocks[0]):
-            blocks[0].move_right()
+        blocks[0].move_right()
+        if check_colisions(grid, blocks[0]):
+            blocks[0].unmove()
     if keys[3]:
-        if not check_colisions(grid, blocks[0]):
+        if not check_floor(grid, blocks[0]):
             blocks[0].move_down()
     grid_update(grid, blocks)
 
 
 def grid_update(grid, blocks):
-    if not check_colisions(grid, blocks[0]):
+    if not check_floor(grid, blocks[0]):
         for point in blocks[0]:
             grid.update(point[0], point[1], True)
     else:
@@ -39,29 +41,16 @@ def grid_update(grid, blocks):
             grid.update(point[0], point[1], True)
         blocks.pop()
 
-
 def check_colisions(grid, block):
+    for point in block:
+        if grid.get(point[0], point[1]):
+            return True
+    return False
+
+def check_floor(grid, block):
     for point in block:
         if point[1] == 19:
             return True
         if grid.get(point[0], point[1]) or grid.get(point[0], point[1] + 1):
-            return True
-    return False
-
-
-def check_left_colisions(grid, block):
-    for point in block:
-        if point[0] == 0:
-            return True
-        if grid.get(point[0], point[1]) or grid.get(point[0] - 1, point[1]):
-            return True
-    return False
-
-
-def check_right_colisions(grid, block):
-    for point in block:
-        if point[0] == 9:
-            return True
-        if grid.get(point[0], point[1]) or grid.get(point[0] + 1, point[1]):
             return True
     return False

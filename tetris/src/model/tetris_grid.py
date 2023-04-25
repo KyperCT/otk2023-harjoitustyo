@@ -25,7 +25,7 @@ class Grid:
         fresh_row = [False for i in range(0, self.columns)]
         del self._grid[row]
         self._grid = [fresh_row] + self._grid
-    
+
     def clear(self):
         self._grid = [
             [False for i in range(0, self.columns)] for i in range(0, self.rows)

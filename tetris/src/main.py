@@ -5,10 +5,10 @@ from logic import core
 
 
 def main():
-    '''
+    """
     Main loop for tetris game. Runs initialization functions, and then runs the core game functions in a loop.
     Ensures operations are done on appropriate frames.
-    '''
+    """
 
     main_display, cap, resolution, font = display.setup()
 
@@ -28,7 +28,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-        if interaction.exit():
+        if interaction.exit_program():
             running = False
         if in_menu:
             display.menu_screen(main_display, resolution, font)

@@ -17,11 +17,13 @@ def get_keypresses() -> tuple:
         down = True
     return up_direction, left, right, down
 
-def exit() -> bool:
+
+def exit_program() -> bool:
     keys = pygame.key.get_pressed()
     if keys[pygame.K_ESCAPE]:
         return True
     return False
+
 
 def update_keypresses(keys) -> tuple:
     current_keys = get_keypresses()
@@ -30,6 +32,7 @@ def update_keypresses(keys) -> tuple:
         if current_keys[i]:
             new_presses[i] = True
     return tuple(new_presses)
+
 
 def any_key() -> bool:
     keys = pygame.key.get_pressed()
