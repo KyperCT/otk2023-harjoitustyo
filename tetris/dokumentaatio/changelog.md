@@ -27,3 +27,4 @@
  - Kattavuusraportti ei katso käyttöliittymän koodia
  - Siistitty ja järjestelty koodia
  - Lisätty uusi palikkatesti
+ - Palikoita voi vierittää ylös näppäimellä

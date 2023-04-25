@@ -7,11 +7,11 @@ ohjelma pitää kirjaa tuloksista.
 
 ## Perusversion toiminnallisuus
 
- - Ohjelma toteuttaa Tetriksen perustoiminnallisuuden
+ - Ohjelma toteuttaa Tetriksen perustoiminnallisuuden \- tehty
    - Ohjelma näyttää pelikentän \- tehty
    - Kentän yläpäähän ilmestyy eri muotoisia paloja, joita pelaaja voi manipuloida sääntöjen mukaisesti \- tehty
    - Palat laskeutuu alaspäin vakionopeutta \- tehty
-   - Paloja voi pyörittää 90 asteen vaiheissa
+   - Paloja voi pyörittää 90 asteen vaiheissa \- tehty
    - Alaspäin laskeutumista voi nopeuttaa näppäimellä \- tehty
    - Kun palat osuu kentän pohjalle tai jo pelattuun palaan, pala jää paikalleen ja annetaan uusi pala \- tehty
    - jos palat täyttää kentän jossain rivissä kokonaan, palat katoaa ja rivin yläpuolella olevat rivit siirtyy kadonneen rivin tilalle \- tehty

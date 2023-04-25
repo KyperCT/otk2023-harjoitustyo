@@ -15,5 +15,6 @@
 | Lisätty testejä logiikkaan, dokumentointia  | 1h    | 18.4.2023  |
 | Lisätty peliin loput palat, lopetus ja menu | 1h    | 25.4.2023  |
 | Reformatoitu ja siistitty koodia            | 1h    | 25.4.2023  |
+| Tehty palikoista pyöritettäviä              | 4h    | 25.4.2023  |
 
-Yhteensä: 12h 20min
+Yhteensä: 16h 20min
