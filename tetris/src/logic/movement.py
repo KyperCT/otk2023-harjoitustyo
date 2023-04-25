@@ -17,7 +17,9 @@ def user_move(grid, keys, blocks):
         grid.update(point[0], point[1], False)
 
     if keys[0]:
-        pass
+        blocks[0].move_rotate()
+        if check_colisions(grid, blocks[0]):
+            blocks[0].unmove()
     if keys[1]:
         blocks[0].move_left()
         if check_colisions(grid, blocks[0]):
