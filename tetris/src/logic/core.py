@@ -1,3 +1,4 @@
+from random import randint
 from model import tetris_grid, tetris_block
 from logic import movement, score
 
@@ -8,7 +9,7 @@ def core_loop(grid: tetris_grid.Grid, total_score: int, keys: tuple, state):
 
     if not state["blocks"]:
         total_score = score.check_score(grid, total_score)
-        state["blocks"].append(tetris_block.Block())
+        state["blocks"].append(tetris_block.Block(shape=(randint(0,6))))
 
     movement.user_move(grid, keys, state["blocks"])
     if state["frame_value"] == state["level"]*4:
