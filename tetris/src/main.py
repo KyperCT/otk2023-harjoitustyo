@@ -42,6 +42,10 @@ def main():
         display.render(grid, total_score, main_display, resolution, font)
         pygame.display.update()
         clock.tick(tick_speed)
+        if state["fail"]:
+            in_menu = True
+            state = None
+            grid.clear()
 
     pygame.quit()
 
