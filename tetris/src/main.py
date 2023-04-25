@@ -22,6 +22,7 @@ def main():
     running = True
     tick_speed = 10
     state = None
+    in_menu = True
 
     while running:
         for event in pygame.event.get():
@@ -29,6 +30,13 @@ def main():
                 running = False
         if interaction.exit():
             running = False
+        if in_menu:
+            display.menu_screen(main_display, resolution, font)
+            if interaction.any_key():
+                in_menu = False
+            else:
+                pygame.display.update()
+                continue
         keys = interaction.get_keypresses()
         grid, total_score, state = core.core_loop(grid, total_score, keys, state)
         display.render(grid, total_score, main_display, resolution, font)

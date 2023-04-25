@@ -34,3 +34,15 @@ def render(grid, score, display, disp_res, font):
         size = (grid_px_size - 2, grid_px_size - 2)
         if not square[0]:
             pygame.draw.rect(display, (0, 0, 0), (top_corner, size))
+
+def menu_screen(display, disp_res, font):
+    pygame.draw.rect(display, (140, 176, 40), ((disp_res[0] / 3, 0),
+                                                 (disp_res[0] / 3 * 2, disp_res[1])))
+    display.blit(
+        font.render(str("Press any key to start"), 
+        False, (0, 0, 0)), (disp_res[0] / 2, disp_res[1] / 5)
+    )
+    display.blit(
+        font.render(str("Press ESC to exit"), 
+        False, (0, 0, 0)), (disp_res[0] / 2, disp_res[1] / 4)
+    )

@@ -30,3 +30,9 @@ def update_keypresses(keys) -> tuple:
         if current_keys[i]:
             new_presses[i] = True
     return tuple(new_presses)
+
+def any_key() -> bool:
+    keys = pygame.key.get_pressed()
+    if True in keys:
+        return True
+    return False
