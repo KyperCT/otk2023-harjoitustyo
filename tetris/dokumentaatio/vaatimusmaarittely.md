@@ -9,7 +9,7 @@ ohjelma pitää kirjaa tuloksista.
 
  - Ohjelma toteuttaa Tetriksen perustoiminnallisuuden
    - Ohjelma näyttää pelikentän \- tehty
-   - Kentän yläpäähän ilmestyy eri muotoisia paloja, joita pelaaja voi manipuloida sääntöjen mukaisesti
+   - Kentän yläpäähän ilmestyy eri muotoisia paloja, joita pelaaja voi manipuloida sääntöjen mukaisesti \- tehty
    - Palat laskeutuu alaspäin vakionopeutta \- tehty
    - Paloja voi pyörittää 90 asteen vaiheissa
    - Alaspäin laskeutumista voi nopeuttaa näppäimellä \- tehty
@@ -18,7 +18,7 @@ ohjelma pitää kirjaa tuloksista.
    - Jos useampi rivi täyttyy samaan aikaan, ne kaikki katoaa ja ylemmät rivit siirtyy alkamaan alimman kadonneen rivin kohdalta \- tehty
    - Rivin täyttämisestä saa pisteitä, jotka näytetään pelinäkymässä \- tehty
    - Useamman rivin täytöstä saa enemmän pisteitä \- tehty
-   - Peli päättyy, kun kentän ylimmällä rivillä on pala siten, että uutta palaa ei voi sijoittaa kentälle
+   - Peli päättyy, kun kentän ylimmällä rivillä on pala siten, että uutta palaa ei voi sijoittaa kentälle  \- tehty
  - Pelin päätyttyä ohjelma tarjoaa mahdollisuuden kirjata talteen pelin aikana kertyneet pisteet nimimerkillä
  - Ohjelmalla voi katsoa listaa aiemmista tuloksista suuruusjärjestyksessä
 

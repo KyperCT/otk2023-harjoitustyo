@@ -18,3 +18,10 @@
  - Refaktoroitu koodia tyyliseikoiltaan
  - Testattu ruudukon ja palikoiden toiminnallisuuden oikeellisuutta
  - Aloitettu testaamaan pelin automaattisten liikkeiden ruudukon ja palikoiden päivittämistä
+
+## Viikko 5
+ 
+ - Kaikki muodot paloille on olemassa
+ - Pelillä on aloitus/lopetus näkymä
+ - Peli päättyy, jos palaa ei voi sijoittaa ruudun alkuun
+ - Kattavuusraportti ei katso käyttöliittymän koodia
