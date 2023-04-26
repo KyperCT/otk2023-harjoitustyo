@@ -16,3 +16,6 @@ Työ on tetris, sen tavoite on toteuttaa pelattava versio Tetris-pelistä. Tarke
  Projektin tiedostot on `tetris/` hakemistossa. Sovellusta voi ajaa menemällä hakemistoon ja ajamalla `poetry install` ja `poetry run invoke start`. Peli käynnistyy suoraan.
 
  Testaaminen, linttaus ja coverage -raportin luominen toimivat invoke komennoilla `test`, `lint` ja `coverage`(/`coverage-report`)
+
+### Uusin julkaisu
+[Viikko 5](https://github.com/KyperCT/otk2023-harjoitustyo/releases/tag/viikko5)
