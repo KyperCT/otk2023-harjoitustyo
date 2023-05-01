@@ -122,6 +122,8 @@ class Block:
                 int(self.center[0] + grid_point[0]),
                 int(self.center[1] + grid_point[1]),
             )
+            if (new_point[0]<0) or (new_point[0]>9):
+                return
             new_pos.append(new_point)
 
         self._past_block = self.block
