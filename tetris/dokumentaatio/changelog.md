@@ -32,3 +32,7 @@
 ## Viikko 6
 
  - Lisätty docstring -dokumentaatio lähes kaikille luokille, metodeille ja funktioille
+ - Testattu pisteidenlaskua ja rivipäivityksiä
+ - Testattu pelin alustusta pääsilmukassa
+ - Testattu ruudukon metodeja kattavammin
+ - Testattu palikoiden osumien tarkistusta
