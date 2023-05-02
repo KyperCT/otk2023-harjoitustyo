@@ -16,5 +16,6 @@
 | Lisätty peliin loput palat, lopetus ja menu | 1h    | 25.4.2023  |
 | Reformatoitu ja siistitty koodia            | 1h    | 25.4.2023  |
 | Tehty palikoista pyöritettäviä              | 4h    | 25.4.2023  |
+| Lisätty docstring -dokumentaatiota koodiin  | 40min | 2.5.2023  |
 
-Yhteensä: 16h 20min
+Yhteensä: 17h
