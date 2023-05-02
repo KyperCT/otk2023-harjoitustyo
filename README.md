@@ -10,6 +10,8 @@ Työ on tetris, sen tavoite on toteuttaa pelattava versio Tetris-pelistä. Tarke
  [Changelog](https://github.com/KyperCT/otk2023-harjoitustyo/blob/main/tetris/dokumentaatio/changelog.md)
  
  [Arkkitehtuuri](https://github.com/KyperCT/otk2023-harjoitustyo/blob/main/tetris/dokumentaatio/arkkitehtuuri.md)
+ 
+ [Käyttöohje](https://github.com/KyperCT/otk2023-harjoitustyo/blob/main/tetris/dokumentaatio/kayttoohje.md)
 
  ### Asennus/käyttö
 
