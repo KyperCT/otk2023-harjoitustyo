@@ -20,4 +20,4 @@ Työ on tetris, sen tavoite on toteuttaa pelattava versio Tetris-pelistä. Tarke
  Testaaminen, linttaus ja coverage -raportin luominen toimivat invoke komennoilla `test`, `lint` ja `coverage`(/`coverage-report`)
 
 ### Uusin julkaisu
-[Viikko 5](https://github.com/KyperCT/otk2023-harjoitustyo/releases/tag/viikko5)
+[Viikko 6](https://github.com/KyperCT/otk2023-harjoitustyo/releases/tag/viikko6)
