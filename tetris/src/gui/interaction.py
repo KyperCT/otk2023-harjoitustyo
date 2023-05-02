@@ -2,8 +2,10 @@ import pygame
 
 
 def get_keypresses() -> tuple:
-    """
-    output: tuple(bool) with inputs in order up, left, right, down
+    """Gets relevant keypresses from pygame
+
+    Returns:
+      tuple(bool) with inputs in order up, left, right, down
     """
     keys = pygame.key.get_pressed()
     up_direction, left, right, down = False, False, False, False
@@ -19,6 +21,11 @@ def get_keypresses() -> tuple:
 
 
 def exit_program() -> bool:
+    """Returns if escape key is pressed
+
+    Returns:
+      True if pressed, False if not
+    """
     keys = pygame.key.get_pressed()
     if keys[pygame.K_ESCAPE]:
         return True
@@ -35,6 +42,11 @@ def update_keypresses(keys) -> tuple:
 
 
 def any_key() -> bool:
+    """Returns if any key is pressed
+
+    Returns:
+      True if pressed, False if not
+    """
     keys = pygame.key.get_pressed()
     if True in keys:
         return True

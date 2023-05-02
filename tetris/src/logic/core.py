@@ -4,6 +4,16 @@ from logic import movement, score
 
 
 def core_loop(grid: tetris_grid.Grid, total_score: int, keys: tuple, state):
+    """Core game loop, runs functions in order and tracks time
+
+    Args:
+      grid: tetris grid
+      total_score: current score value
+      keys: Keys pressed as tuple (up, left, right, down)
+      state: dictionary which stores game state
+    Returns:
+      Tuple; tetris_grid object, total score and game state
+    """
     if state is None:
         state = {"frame_value": 0, "blocks": [], "level": 1, "fail": False}
 

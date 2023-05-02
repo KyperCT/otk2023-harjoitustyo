@@ -1,4 +1,13 @@
 def check_score(grid, score):
+    """Clears rows and calculates score from clears
+    
+    Args:
+      grid: tetris grid
+      score: current score
+
+    Returns:
+      updated score
+    """
     clears = []
     for row in range(0, grid.rows):
         if grid.check_row(row):

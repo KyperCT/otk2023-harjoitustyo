@@ -2,6 +2,12 @@ from model import tetris_block
 
 
 def game_move(grid, blocks):
+    """Excecutes block movement by the game
+
+    Args:
+      grid: tetris grid
+      blocks: list of tetris blocks
+    """
     if len(blocks) == 0:
         blocks.append(tetris_block.Block())
     for point in blocks[0]:
@@ -13,6 +19,13 @@ def game_move(grid, blocks):
 
 
 def user_move(grid, keys, blocks):
+    """Excecutes block movement by the user
+
+    Args:
+      grid: tetris grid
+      keys: keys pressed, tuple (up, left, right, down)
+      blocks: list of tetris blocks
+    """
     for point in blocks[0]:
         grid.update(point[0], point[1], False)
 
@@ -35,6 +48,12 @@ def user_move(grid, keys, blocks):
 
 
 def grid_update(grid, blocks):
+    """Updates grid with new block positions
+
+    Args:
+      grid: tetris grid
+      blocks: list of tetris blocks
+    """
     if not check_floor(grid, blocks[0]):
         for point in blocks[0]:
             grid.update(point[0], point[1], True)
@@ -45,6 +64,15 @@ def grid_update(grid, blocks):
 
 
 def check_colisions(grid, block):
+    """Checks if new block position conflicts with existing grid.
+
+    Args:
+      grid: tetris grid
+      block: tetris block being checked
+
+    Returns:
+      True if there is a colision, False otherwise
+    """
     for point in block:
         if grid.get(point[0], point[1]):
             return True
@@ -52,6 +80,15 @@ def check_colisions(grid, block):
 
 
 def check_floor(grid, block):
+    """Checks if new block position conflicts with grid floor.
+
+    Args:
+      grid: tetris grid
+      block: tetris block being checked
+
+    Returns:
+      True if there is a colision, False otherwise
+    """
     for point in block:
         if point[1] == 19:
             return True

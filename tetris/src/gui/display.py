@@ -2,6 +2,10 @@ import pygame
 
 
 def setup():
+    """Defines and generates basic UI elements.
+
+    Returns: Pygame display, window caption, Resolution, font
+    """
     caption = "Tetris"
     display_resolution = (720, 720)
 
@@ -14,6 +18,15 @@ def setup():
 
 
 def render(grid, score, display, disp_res, font):
+    """Renders game elements
+
+    Args:
+      grid: tetris grid
+      score: score value
+      display: pygame display
+      disp_res: display resolution
+      font: font for text elements
+    """
     # sidebar
     pygame.draw.rect(display, (140, 176, 40), ((0, 0), (disp_res[0] / 3, disp_res[1])))
     display.blit(
@@ -37,6 +50,12 @@ def render(grid, score, display, disp_res, font):
 
 
 def menu_screen(display, disp_res, font):
+    """Renders menu screen displayed between games
+    Args:
+      display: pygame display
+      disp_res: display resolution
+      font: font for text elements
+    """
     pygame.draw.rect(
         display,
         (140, 176, 40),
