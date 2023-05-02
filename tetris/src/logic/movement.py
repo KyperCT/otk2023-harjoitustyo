@@ -8,8 +8,6 @@ def game_move(grid, blocks):
       grid: tetris grid
       blocks: list of tetris blocks
     """
-    if len(blocks) == 0:
-        blocks.append(tetris_block.Block())
     for point in blocks[0]:
         grid.update(point[0], point[1], False)
 
