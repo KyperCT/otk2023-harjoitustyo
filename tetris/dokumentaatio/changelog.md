@@ -28,3 +28,7 @@
  - Siistitty ja järjestelty koodia
  - Lisätty uusi palikkatesti
  - Palikoita voi vierittää ylös näppäimellä
+
+## Viikko 6
+
+ - Lisätty docstring -dokumentaatio lähes kaikille luokille, metodeille ja funktioille
