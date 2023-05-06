@@ -12,7 +12,7 @@ def setup():
     display = pygame.display.set_mode(display_resolution)
 
     pygame.font.init()
-    font = pygame.font.SysFont("Arial", 30)
+    font = pygame.font.SysFont("monospace", 30, bold=True)
 
     return display, caption, display_resolution, font
 
@@ -65,7 +65,7 @@ def menu_screen(high_score_list, display, disp_res, font):
     visual_row = 0
     for data in high_score_list:
         display.blit(
-            font.render(f"{data[0]}{data[1]:>14}", False, (0, 0, 0)),
+            font.render(f"{data[0]:<14}{data[1]}", False, (0, 0, 0)),
             (disp_res[0] / 4, (disp_res[1] / 8)+(32*visual_row)),
         )
         visual_row += 1    
