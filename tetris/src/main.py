@@ -2,6 +2,7 @@ import pygame
 from gui import display, interaction
 from model import tetris_grid
 from logic import core
+from database import db_interact
 
 
 def main():
@@ -18,6 +19,7 @@ def main():
 
     grid = tetris_grid.Grid()
     total_score = 0
+    db_interact.database_startup()
 
     running = True
     tick_speed = 10
@@ -37,7 +39,8 @@ def main():
         if interaction.exit_program():
             running = False
         if in_menu:
-            display.menu_screen([], main_display, resolution, font)
+            score_list = db_interact.database_get_top_scores()
+            display.menu_screen(score_list, main_display, resolution, font)
             if interaction.any_key():
                 in_menu = False
                 in_game = True
@@ -48,11 +51,13 @@ def main():
                 username = username[:-1]
             display.score_name_entry(total_score, username, main_display, resolution, font)
             if keytype == 0:
+                db_interact.database_enter_new_score(username, total_score)
                 state = None
                 grid.clear()
                 in_menu = True
                 in_fail = False
                 username = ""
+                total_score = 0
         if in_game:
             keys = interaction.get_keypresses()
             grid, total_score, state = core.core_loop(grid, total_score, keys, state)
