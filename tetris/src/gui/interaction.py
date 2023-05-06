@@ -51,3 +51,19 @@ def any_key() -> bool:
     if True in keys:
         return True
     return False
+
+def collect_keypress(events) -> tuple:
+    """Gets user text input for score entry
+
+    Returns:
+      Returns one of three tuples (0, "") for enter, (1, "") for backspace (2, str) for text
+    """
+    output = ""
+    for event in events:
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_RETURN:
+                return 0, ""
+            if event.key == pygame.K_BACKSPACE:
+                return 1, ""
+            output += event.unicode
+    return 2, output

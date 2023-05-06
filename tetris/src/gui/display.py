@@ -69,3 +69,36 @@ def menu_screen(display, disp_res, font):
         font.render(str("Press ESC to exit"), False, (0, 0, 0)),
         (disp_res[0] / 2, disp_res[1] / 4),
     )
+
+def score_name_entry(score, text, display, disp_res, font):
+    """Renders box for name entry
+    Args:
+      score: total score from game
+      text: text given as name
+      display: pygame display
+      disp_res: display resolution
+      font: font for text elements
+    """
+    pygame.draw.rect(
+        display,
+        (130, 174, 40),
+        ((disp_res[0] / 4, disp_res[0] / 3), (disp_res[0] / 2, disp_res[0] / 4)),
+    )
+    display.blit(
+        font.render(str(score), False, (0, 0, 0)),
+        (disp_res[0] / 2, disp_res[0] / 4 + disp_res[0] / 8),
+    )
+    display.blit(
+        font.render(str("Enter Name:"), False, (0, 0, 0)),
+        (disp_res[0] / 3, disp_res[0] / 4 + (disp_res[0] / 8)*(1.5)),
+    )
+    pygame.draw.rect(
+        display,
+        (110, 154, 20),
+        ((disp_res[0] / 3, disp_res[0] / 4 + (disp_res[0] / 8)*2), 
+        (disp_res[0] / 5, 40)),
+    )
+    display.blit(
+        font.render(str(text), False, (0, 0, 0)),
+        (disp_res[0] / 3, disp_res[0] / 4 + (disp_res[0] / 8)*2),
+    )

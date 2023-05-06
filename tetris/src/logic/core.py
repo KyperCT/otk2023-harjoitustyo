@@ -24,7 +24,7 @@ def core_loop(grid: tetris_grid.Grid, total_score: int, keys: tuple, state):
             state["fail"] = True
             return grid, total_score, state
     movement.user_move(grid, keys, state["blocks"])
-    if state["frame_value"] == state["level"] * 4:
+    if state["frame_value"] >= state["level"] * 4 and state["blocks"]:
         movement.game_move(grid, state["blocks"])
         state["frame_value"] = 0
     else:
