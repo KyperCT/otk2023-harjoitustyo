@@ -43,3 +43,4 @@
  - Lisätty tietokanta pistesuoritusten säilöntään
  - Lisätty ruutu pelin loppuun pistesuorituksen kirjausta varten
  - Peli näyttää pistesuoritukset alkuruudulla
+ - Testattu tietokantafunktioita
