@@ -19,8 +19,8 @@ ohjelma pitää kirjaa tuloksista.
    - Rivin täyttämisestä saa pisteitä, jotka näytetään pelinäkymässä \- tehty
    - Useamman rivin täytöstä saa enemmän pisteitä \- tehty
    - Peli päättyy, kun kentän ylimmällä rivillä on pala siten, että uutta palaa ei voi sijoittaa kentälle  \- tehty
- - Pelin päätyttyä ohjelma tarjoaa mahdollisuuden kirjata talteen pelin aikana kertyneet pisteet nimimerkillä
- - Ohjelmalla voi katsoa listaa aiemmista tuloksista suuruusjärjestyksessä
+ - Pelin päätyttyä ohjelma tarjoaa mahdollisuuden kirjata talteen pelin aikana kertyneet pisteet nimimerkillä \- tehty
+ - Ohjelmalla voi katsoa listaa aiemmista tuloksista suuruusjärjestyksessä \- tehty
 
 ## Jatkotoiminnallisuutta
 
