@@ -52,7 +52,7 @@ def any_key() -> bool:
         return True
     return False
 
-def collect_keypress(events) -> tuple:
+def collect_keypress_text(events) -> tuple:
     """Gets user text input for score entry
 
     Returns:

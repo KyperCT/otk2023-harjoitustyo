@@ -42,7 +42,7 @@ def main():
                 in_menu = False
                 in_game = True
         if in_fail:
-            keytype, text = interaction.collect_keypress(eventlist)
+            keytype, text = interaction.collect_keypress_text(eventlist)
             username += text
             if keytype == 1:
                 username = username[:-1]
