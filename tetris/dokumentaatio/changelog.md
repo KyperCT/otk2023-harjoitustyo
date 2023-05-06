@@ -36,3 +36,10 @@
  - Testattu pelin alustusta pääsilmukassa
  - Testattu ruudukon metodeja kattavammin
  - Testattu palikoiden osumien tarkistusta
+
+## Viikko 7
+
+ - Lisätty nimimerkin kirjoitus pelin loppuun pistetaulua varten
+ - Lisätty tietokanta pistesuoritusten säilöntään
+ - Lisätty ruutu pelin loppuun pistesuorituksen kirjausta varten
+ - Peli näyttää pistesuoritukset alkuruudulla

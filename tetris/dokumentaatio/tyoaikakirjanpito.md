@@ -20,5 +20,9 @@
 | Arkkitehtuuridokun kirjoitusta              | 2h    | 2.5.2023   |
 | Käyttöohjeen kirjoitusta                    | 15min | 2.5.2023   |
 | Testikattavuuden parantamista               | 2h    | 2.5.2023   |
+| Nimimerkin kirjoitusruutu pelin loppuun     | 1.75h | 6.5.2023   |
+| Tietokanta lisätty pisteiden kirjauskselle  | 1h    | 6.5.2023   |
+| UI parantelua                               | 15min | 6.5.2023   |
+| Lisätty testejä tietokanta funktioille      | 30min | 6.5.2023   |
 
-Yhteensä: 21h 15min
+Yhteensä: 24h 45min
