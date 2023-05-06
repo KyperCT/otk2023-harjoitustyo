@@ -37,7 +37,7 @@ def main():
         if interaction.exit_program():
             running = False
         if in_menu:
-            display.menu_screen(main_display, resolution, font)
+            display.menu_screen([], main_display, resolution, font)
             if interaction.any_key():
                 in_menu = False
                 in_game = True

@@ -49,9 +49,10 @@ def render(grid, score, display, disp_res, font):
             pygame.draw.rect(display, (0, 0, 0), (top_corner, size))
 
 
-def menu_screen(display, disp_res, font):
+def menu_screen(high_score_list, display, disp_res, font):
     """Renders menu screen displayed between games
     Args:
+      high_score_list: ordered list of high scores
       display: pygame display
       disp_res: display resolution
       font: font for text elements
@@ -59,15 +60,23 @@ def menu_screen(display, disp_res, font):
     pygame.draw.rect(
         display,
         (140, 176, 40),
-        ((disp_res[0] / 3, 0), (disp_res[0] / 3 * 2, disp_res[1])),
+        ((0,0), (disp_res[0], disp_res[1])),
     )
+    visual_row = 0
+    for data in high_score_list:
+        display.blit(
+            font.render(f"{data[0]}{data[1]:>14}", False, (0, 0, 0)),
+            (disp_res[0] / 4, (disp_res[1] / 8)+(32*visual_row)),
+        )
+        visual_row += 1    
     display.blit(
         font.render(str("Press any key to start"), False, (0, 0, 0)),
-        (disp_res[0] / 2, disp_res[1] / 5),
+        (disp_res[0] / 3, (disp_res[1] / 8)+(32*visual_row)),
     )
+    visual_row += 1
     display.blit(
         font.render(str("Press ESC to exit"), False, (0, 0, 0)),
-        (disp_res[0] / 2, disp_res[1] / 4),
+        (disp_res[0] / 3, (disp_res[1] / 8)+(32*visual_row)),
     )
 
 def score_name_entry(score, text, display, disp_res, font):
