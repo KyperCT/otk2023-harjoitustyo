@@ -60,24 +60,25 @@ def menu_screen(high_score_list, display, disp_res, font):
     pygame.draw.rect(
         display,
         (140, 176, 40),
-        ((0,0), (disp_res[0], disp_res[1])),
+        ((0, 0), (disp_res[0], disp_res[1])),
     )
     visual_row = 0
     for data in high_score_list:
         display.blit(
             font.render(f"{data[0]:<14}{data[1]}", False, (0, 0, 0)),
-            (disp_res[0] / 4, (disp_res[1] / 8)+(32*visual_row)),
+            (disp_res[0] / 4, (disp_res[1] / 8) + (32 * visual_row)),
         )
-        visual_row += 1    
+        visual_row += 1
     display.blit(
         font.render(str("Press any key to start"), False, (0, 0, 0)),
-        (disp_res[0] / 3, (disp_res[1] / 8)+(32*visual_row)),
+        (disp_res[0] / 3, (disp_res[1] / 8) + (32 * visual_row)),
     )
     visual_row += 1
     display.blit(
         font.render(str("Press ESC to exit"), False, (0, 0, 0)),
-        (disp_res[0] / 3, (disp_res[1] / 8)+(32*visual_row)),
+        (disp_res[0] / 3, (disp_res[1] / 8) + (32 * visual_row)),
     )
+
 
 def score_name_entry(score, text, display, disp_res, font):
     """Renders box for name entry
@@ -99,15 +100,17 @@ def score_name_entry(score, text, display, disp_res, font):
     )
     display.blit(
         font.render(str("Enter Name:"), False, (0, 0, 0)),
-        (disp_res[0] / 3, disp_res[0] / 4 + (disp_res[0] / 8)*(1.5)),
+        (disp_res[0] / 3, disp_res[0] / 4 + (disp_res[0] / 8) * (1.5)),
     )
     pygame.draw.rect(
         display,
         (110, 154, 20),
-        ((disp_res[0] / 3, disp_res[0] / 4 + (disp_res[0] / 8)*2), 
-        (disp_res[0] / 5, 40)),
+        (
+            (disp_res[0] / 3, disp_res[0] / 4 + (disp_res[0] / 8) * 2),
+            (disp_res[0] / 5, 40),
+        ),
     )
     display.blit(
         font.render(str(text), False, (0, 0, 0)),
-        (disp_res[0] / 3, disp_res[0] / 4 + (disp_res[0] / 8)*2),
+        (disp_res[0] / 3, disp_res[0] / 4 + (disp_res[0] / 8) * 2),
     )

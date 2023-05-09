@@ -1,4 +1,3 @@
-from model import tetris_block
 
 
 def game_move(grid, blocks):

@@ -35,6 +35,7 @@ class Block:
       _past_block: stores block before move for unmove
       _rotate_last: stores whether the block was rotated for unmove
     """
+
     def __init__(self, x_coord=5, y_coord=0, shape=0):
         """Constructor for block object
 
@@ -119,8 +120,7 @@ class Block:
         self._rotate_last = False
 
     def _rotate_grid(self):
-        """Rotates rotation grid used for block rotation (matrix rotation)
-        """
+        """Rotates rotation grid used for block rotation (matrix rotation)"""
         if self._transposed:
             self._transposed = False
         else:
@@ -162,7 +162,7 @@ class Block:
                 int(self.center[0] + grid_point[0]),
                 int(self.center[1] + grid_point[1]),
             )
-            if (new_point[0]<0) or (new_point[0]>9):
+            if (new_point[0] < 0) or (new_point[0] > 9):
                 return
             new_pos.append(new_point)
 

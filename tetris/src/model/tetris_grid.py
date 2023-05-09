@@ -6,9 +6,9 @@ class Grid:
       columns: columns in grid
       _grid: internal data structure for grid
     """
+
     def __init__(self):
-        """Constructor for object, makes new empty grid
-        """
+        """Constructor for object, makes new empty grid"""
         self.rows = 20
         self.columns = 10
         self._grid = [
@@ -31,7 +31,7 @@ class Grid:
         Args:
           column: which column the point is in
           row: which row the point is in
-        
+
         Returns:
           True if occupied, False if not
         """
@@ -42,7 +42,7 @@ class Grid:
 
         Args:
           row: which row to check
-        
+
         Returns:
           True if all points are occupied, False if not
         """
@@ -66,15 +66,14 @@ class Grid:
         self._grid = [fresh_row] + self._grid
 
     def clear(self):
-        """Makes the entire grid unoccupied
-        """
+        """Makes the entire grid unoccupied"""
         self._grid = [
             [False for i in range(0, self.columns)] for i in range(0, self.rows)
         ]
 
     def __iter__(self):
         """Allows the grid to be iterated over, left to right, top to bottom
-        
+
         Yields:
           Next point
         """

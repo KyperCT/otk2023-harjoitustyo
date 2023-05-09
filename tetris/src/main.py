@@ -7,7 +7,8 @@ from database import db_interact
 
 def main():
     """
-    Main loop for tetris game. Runs initialization functions, and then runs the core game functions in a loop.
+    Main loop for tetris game. Runs initialization functions, 
+    and then runs the core game functions in a loop.
     Ensures operations are done on appropriate frames.
     """
 
@@ -35,7 +36,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
             eventlist.append(event)
-            
+
         if interaction.exit_program():
             running = False
         if in_menu:
@@ -49,7 +50,9 @@ def main():
             username += text
             if keytype == 1:
                 username = username[:-1]
-            display.score_name_entry(total_score, username, main_display, resolution, font)
+            display.score_name_entry(
+                total_score, username, main_display, resolution, font
+            )
             if keytype == 0:
                 db_interact.database_enter_new_score(username, total_score)
                 state = None
@@ -65,12 +68,10 @@ def main():
             if state["fail"]:
                 in_fail = True
                 in_game = False
-    
+
         pygame.display.update()
         clock.tick(tick_speed)
         eventlist = []
-        
-
 
     pygame.quit()
 

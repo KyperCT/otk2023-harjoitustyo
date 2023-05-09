@@ -32,15 +32,6 @@ def exit_program() -> bool:
     return False
 
 
-def update_keypresses(keys) -> tuple:
-    current_keys = get_keypresses()
-    new_presses = list(keys)
-    for i in range(0, len(current_keys)):
-        if current_keys[i]:
-            new_presses[i] = True
-    return tuple(new_presses)
-
-
 def any_key() -> bool:
     """Returns if any key is pressed
 
@@ -51,6 +42,7 @@ def any_key() -> bool:
     if True in keys:
         return True
     return False
+
 
 def collect_keypress_text(events) -> tuple:
     """Gets user text input for score entry

@@ -56,7 +56,7 @@ class TestGrid(unittest.TestCase):
         for i in range(0, 10):
             self.grid.update(i, 1, True)
         self.assertEqual(self.grid.check_row(1), True)
-    
+
     def test_clear_clears_grid(self):
         self.grid.update(4, 5, True)
         self.grid.update(7, 12, True)
@@ -72,7 +72,7 @@ class TestGrid(unittest.TestCase):
             if point[0]:
                 is_not_empty = True
         self.assertEqual(is_not_empty, False)
-    
+
     def test_shift_down_over_works(self):
         self.grid.update(4, 5, True)
         self.grid.update(7, 12, True)
@@ -82,7 +82,7 @@ class TestGrid(unittest.TestCase):
         self.grid.update(8, 19, True)
 
         self.grid.shift_down_over(15)
-        new_filled_points = [(4,6),(7,13),(2,8),(8,19)]
+        new_filled_points = [(4, 6), (7, 13), (2, 8), (8, 19)]
         any_wrong_values = False
         for point in self.grid:
             if (point[1], point[2]) in new_filled_points:
@@ -92,7 +92,7 @@ class TestGrid(unittest.TestCase):
                 if point[0]:
                     any_wrong_values = True
         self.assertEqual(any_wrong_values, False)
-    
+
     def test_shift_down_over_works_at_row_0(self):
         self.grid.update(4, 5, True)
         self.grid.update(7, 12, True)
@@ -102,7 +102,7 @@ class TestGrid(unittest.TestCase):
         self.grid.update(8, 19, True)
 
         self.grid.shift_down_over(0)
-        new_filled_points = [(4,5),(7,12),(2,7),(8,19)]
+        new_filled_points = [(4, 5), (7, 12), (2, 7), (8, 19)]
         any_wrong_values = False
         for point in self.grid:
             if (point[1], point[2]) in new_filled_points:

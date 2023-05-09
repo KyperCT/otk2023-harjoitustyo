@@ -1,6 +1,6 @@
 def check_score(grid, score):
     """Clears rows and calculates score from clears
-    
+
     Args:
       grid: tetris grid
       score: current score
