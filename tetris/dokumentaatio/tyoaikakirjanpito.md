@@ -24,5 +24,6 @@
 | Tietokanta lisätty pisteiden kirjauskselle  | 1h    | 6.5.2023   |
 | UI parantelua                               | 15min | 6.5.2023   |
 | Lisätty testejä tietokanta funktioille      | 30min | 6.5.2023   |
+| Siistitty koodia ja repositoriota           | 15min | 9.5.2023   |
 
-Yhteensä: 24h 45min
+Yhteensä: 25h
