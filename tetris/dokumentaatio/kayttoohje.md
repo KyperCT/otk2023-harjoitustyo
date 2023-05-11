@@ -1,5 +1,7 @@
 # Käyttöohje
 
+Ohjelman uusimman palautetun version saa lataamalla uusimman julkaisun (releases) lähdekoodin julkaisun *assets* -osioista. Ohjelman uusimman kehitysversion saa kloonaamalla repositorion *main* -haaran.
+
 ### Alustus ja käynnistys
 
 Repositorion ladattuasi sovelluksen asennus tehdään `tetris/` -kansiossa komennolla 
