@@ -26,5 +26,6 @@
 | Lisätty testejä tietokanta funktioille      | 30min | 6.5.2023   |
 | Siistitty koodia ja repositoriota           | 15min | 9.5.2023   |
 | Dokumentaation korjailua                    | 20min | 11.5.2023  |
+| Testidokumentaation kirjoitus               | 40min | 14.5.2023  |
 
-Yhteensä: 25h 20min
+Yhteensä: 26h
